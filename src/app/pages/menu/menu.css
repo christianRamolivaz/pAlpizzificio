@@ -58,9 +58,6 @@
   flex-shrink: 0;
 }
 
-.search-bar__clear:hover {
-  opacity: 1;
-}
 
 .category-filter {
   background: #f9fafb;
@@ -102,11 +99,6 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
-.category-chip:hover {
-  border-color: #d1121d;
-  color: #d1121d;
-  box-shadow: 0 2px 6px rgba(209,18,29,0.12);
-}
 
 .category-chip--active {
   background: #d1121d;
@@ -114,7 +106,6 @@
   color: #fff;
   box-shadow: 0 2px 8px rgba(209,18,29,0.25);
 }
-.category-chip--active:hover { border-color: #9b0e16; background: #9b0e16; }
 
 .category-filter__reset {
   margin-top: 0.5rem;
@@ -128,7 +119,6 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-.category-filter__reset:hover { color: #9b0e16; }
 
 .menu-section {
   margin-top: 0.25rem;
@@ -165,9 +155,6 @@
     margin-right: -2.5rem;
     padding: 0.75rem 2.5rem;
   }
-}
-@media (hover: hover) {
-  .menu-section__header:hover { opacity: 0.8; }
 }
 .menu-section__header:first-child { margin-top: 0; }
 
@@ -281,13 +268,11 @@
   flex-shrink: 0;
   box-shadow: 0 2px 6px rgba(209,18,29,0.3);
 }
-.btn-action--add:hover { background: #9b0e16; box-shadow: 0 3px 10px rgba(209,18,29,0.4); }
 
 .btn-action--baby {
   background: #f59e0b;
   color: #111827;
 }
-.btn-action--baby:hover { background: #d97706; }
 
 .btn-action--edit {
   background: transparent;
@@ -300,7 +285,6 @@
   flex-shrink: 0;
   border-radius: 999px;
 }
-.btn-action--edit:hover { background: #d1121d; color: #fff; box-shadow: 0 2px 6px rgba(209,18,29,0.25); }
 
 .btn-action--ghost {
   background: transparent;
@@ -310,7 +294,6 @@
   font-size: 0.82rem;
   border-radius: 999px;
 }
-.btn-action--ghost:hover { border-color: #9ca3af; background: #f9fafb; }
 
 .btn-action--confirm {
   background: #d1121d;
@@ -320,7 +303,6 @@
   border-radius: 999px;
   box-shadow: 0 2px 6px rgba(209,18,29,0.3);
 }
-.btn-action--confirm:hover { background: #9b0e16; }
 
 .customize-panel {
   margin-top: 0.875rem;
@@ -373,8 +355,6 @@
   transition: border-color 0.15s, background 0.15s;
   user-select: none;
 }
-.baby-toggle:hover { border-color: #d1121d; background: #fff5f5; }
-.baby-toggle--active { border-color: #d1121d; background: #fff5f5; }
 
 .baby-toggle__check {
   width: 18px;
