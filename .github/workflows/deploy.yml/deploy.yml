@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
       branches:
-            - main  # 👈 Sostituisci con "master" se il tuo branch principale si chiama così
+            - modifiche  # 👈 Sostituisci con "master" se il tuo branch principale si chiama così
 
             jobs:
               deploy:
