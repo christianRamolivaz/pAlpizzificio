@@ -1,0 +1,656 @@
+[
+  {
+    "id": 2,
+    "category": "Antipasti e Fritti",
+    "name": "Patatine fritte*",
+    "description": "Patatine fritte croccanti",
+    "baseIngredients": [
+      "patate"
+    ],
+    "price": 7.0,
+    "importoBaby": 4.0,
+    "isBaby": false
+  },
+  {
+    "id": 4,
+    "category": "Antipasti e Fritti",
+    "name": "Pizzette fritte*",
+    "description": "Tipo gnocco fritto",
+    "baseIngredients": [],
+    "price": 10.0,
+    "importoBaby": 6.0,
+    "isBaby": false
+  },
+  {
+    "id": 5,
+    "category": "Antipasti e Fritti",
+    "name": "Olive ascolane*",
+    "description": "Olive ascolane fritte ripiene di carne",
+    "baseIngredients": [
+      "olive",
+      "carne"
+    ],
+    "price": 5.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 6,
+    "category": "Antipasti e Fritti",
+    "name": "Crocché di patate, salsiccia e friarielli*",
+    "description": "Crocché di patate con salsiccia e friarielli",
+    "baseIngredients": [
+      "patate",
+      "salsiccia",
+      "friarielli"
+    ],
+    "price": 6.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 7,
+    "category": "Antipasti e Fritti",
+    "name": "Mozzarella in carrozza*",
+    "description": "Mozzarella in carrozza fritta",
+    "baseIngredients": [
+      "mozzarella",
+      "pane"
+    ],
+    "price": 6.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+   {
+    "id": 8,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Margherita Fritta (1 pz)",
+    "description": "Calzoncino fritto con pomodoro, mozzarella, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella",
+      "basilico"
+    ],
+    "price": 5.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 9,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Margherita Fritta (2 pz)",
+    "description": "Calzoncini fritti con pomodoro, mozzarella, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella",
+      "basilico"
+    ],
+    "price": 9.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 10,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Spianata piccante Fritta (1 pz)",
+    "description": "Spianata piccante fritta",
+    "baseIngredients": [
+      "spianata piccante"
+    ],
+    "price": 6.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 11,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Spianata piccante Fritta (2 pz)",
+    "description": "Spianata piccante fritta – 2 pezzi",
+    "baseIngredients": [
+      "spianata piccante"
+    ],
+    "price": 11.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 12,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Prosciutto cotto Fritta (1 pz)",
+    "description": "Calzoncino fritto con pomodoro, mozzarella, prosciutto cotto",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella",
+      "prosciutto cotto"
+    ],
+    "price": 6.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 13,
+    "category": "Calzoncini Fritti Ripieni",
+    "name": "Prosciutto cotto Fritta (2 pz)",
+    "description": "Calzoncini fritti con pomodoro, mozzarella, prosciutto cotto",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella",
+      "prosciutto cotto"
+    ],
+    "price": 11.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 15,
+    "category": "Pizze Rosse",
+    "name": "Margherita",
+    "description": "Pomodoro, mozzarella fior di latte, basilico, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "basilico",
+      "olio evo"
+    ],
+    "price": 8.5,
+    "importoBaby": 5.5,
+    "isBaby": false
+  },
+  {
+    "id": 17,
+    "category": "Pizze Rosse",
+    "name": "Marinara",
+    "description": "Pomodoro, origano, aglio, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "origano",
+      "aglio",
+      "olio evo"
+    ],
+    "price": 7.5,
+    "importoBaby": 4.5,
+    "isBaby": false
+  },
+  {
+    "id": 19,
+    "category": "Pizze Rosse",
+    "name": "Bufala",
+    "description": "Pomodoro, mozzarella di bufala, basilico, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella di bufala",
+      "basilico",
+      "olio evo"
+    ],
+    "price": 11.0,
+    "importoBaby": 7.0,
+    "isBaby": false
+  },
+  {
+    "id": 21,
+    "category": "Pizze Rosse",
+    "name": "Provola e Pepe",
+    "description": "Pomodoro, provola affumicata, pepe nero, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "provola affumicata",
+      "pepe nero",
+      "olio evo"
+    ],
+    "price": 11.0,
+    "importoBaby": 7.0,
+    "isBaby": false
+  },
+  {
+    "id": 23,
+    "category": "Pizze Rosse",
+    "name": "La Randù",
+    "description": "Salsa randù (pomodoro e nduja), melanzane, mozzarella fior di latte, provola affumicata, basilico",
+    "baseIngredients": [
+      "salsa randù",
+      "melanzane",
+      "mozzarella fior di latte",
+      "provola affumicata",
+      "basilico"
+    ],
+    "price": 14.5,
+    "importoBaby": 9.0,
+    "isBaby": false
+  },
+  {
+    "id": 25,
+    "category": "Pizze Rosse",
+    "name": "Prosciutto cotto",
+    "description": "Pomodoro, mozzarella fior di latte, prosciutto cotto, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "prosciutto cotto",
+      "basilico"
+    ],
+    "price": 10.5,
+    "importoBaby": 6.5,
+    "isBaby": false
+  },
+  {
+    "id": 27,
+    "category": "Pizze Rosse",
+    "name": "Diavola",
+    "description": "Pomodoro, mozzarella fior di latte, spianata piccante, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "spianata piccante",
+      "basilico"
+    ],
+    "price": 10.5,
+    "importoBaby": 6.5,
+    "isBaby": false
+  },
+  {
+    "id": 29,
+    "category": "Pizze Rosse",
+    "name": "Calabrese",
+    "description": "Pomodoro, mozzarella fior di latte, spianata piccante, Nduja di Spilinga, cipolle rosse di Tropea",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "spianata piccante",
+      "Nduja di Spilinga",
+      "cipolle rosse di Tropea"
+    ],
+    "price": 12.5,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 31,
+    "category": "Pizze Rosse",
+    "name": "Napoletana",
+    "description": "Pomodoro, mozzarella fior di latte, acciughe del Mediterraneo, capperi, olive nostraline, origano",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "acciughe",
+      "capperi",
+      "olive nostraline",
+      "origano"
+    ],
+    "price": 12.5,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 33,
+    "category": "Pizze Rosse",
+    "name": "Greca",
+    "description": "Pomodoro, mozzarella fior di latte, olive nostraline, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "olive nostraline",
+      "basilico"
+    ],
+    "price": 10.5,
+    "importoBaby": 6.5,
+    "isBaby": false
+  },
+  {
+    "id": 35,
+    "category": "Pizze Rosse",
+    "name": "Tonno e cipolle",
+    "description": "Pomodoro, fior di latte, tonno, cipolle rosse di Tropea, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "fior di latte",
+      "tonno",
+      "cipolle rosse di Tropea",
+      "basilico"
+    ],
+    "price": 12.0,
+    "importoBaby": 7.0,
+    "isBaby": false
+  },
+  {
+    "id": 37,
+    "category": "Pizze Rosse",
+    "name": "Amatriciana",
+    "description": "Pomodoro, mozzarella fior di latte, cipolla rossa di Tropea, pecorino Romano, guanciale croccante, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "cipolla rossa di Tropea",
+      "pecorino Romano",
+      "guanciale croccante",
+      "basilico"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.5,
+    "isBaby": false
+  },
+  {
+    "id": 39,
+    "category": "Pizze Rosse",
+    "name": "Tropea",
+    "description": "Pomodoro, cipolla rossa di Tropea, origano, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "cipolla rossa di Tropea",
+      "origano",
+      "olio evo"
+    ],
+    "price": 8.0,
+    "importoBaby": 5.0,
+    "isBaby": false
+  },
+  {
+    "id": 41,
+    "category": "Pizze Rosse",
+    "name": "Salsiccetta",
+    "description": "Pomodoro, mozzarella fior di latte, salsiccia, olio evo",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "salsiccia",
+      "olio evo"
+    ],
+    "price": 10.5,
+    "importoBaby": 6.5,
+    "isBaby": false
+  },
+  {
+    "id": 43,
+    "category": "Pizze Rosse",
+    "name": "Americana",
+    "description": "Pomodoro, mozzarella fior di latte, wurstel di suino, patatine fritte",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "wurstel di suino",
+      "patatine fritte"
+    ],
+    "price": 11.5,
+    "importoBaby": 7.0,
+    "isBaby": false
+  },
+  {
+    "id": 45,
+    "category": "Pizze Rosse",
+    "name": "Americana Pro",
+    "description": "Pomodoro, mozzarella fior di latte, wurstel di suino, guanciale croccante, patatine fritte",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "wurstel di suino",
+      "guanciale croccante",
+      "patatine fritte"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 47,
+    "category": "Pizze Rosse",
+    "name": "Boscaiola",
+    "description": "Pomodoro, mozzarella fior di latte, salsiccia, funghi champignon",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "salsiccia",
+      "funghi champignon"
+    ],
+    "price": 13.0,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 49,
+    "category": "Pizze Rosse",
+    "name": "Vegetariana",
+    "description": "Pomodoro, mozzarella fior di latte, melanzane, zucchine, peperoni, cipolle rosse di Tropea, basilico",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "melanzane",
+      "zucchine",
+      "peperoni",
+      "cipolle rosse di Tropea",
+      "basilico"
+    ],
+    "price": 13.0,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 51,
+    "category": "Pizze Rosse",
+    "name": "Capricciosa",
+    "description": "Pomodoro, mozzarella fior di latte, prosciutto cotto, funghi champignon, olive, carciofi sott'olio",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "prosciutto cotto",
+      "funghi champignon",
+      "olive",
+      "carciofi sott'olio"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 53,
+    "category": "Pizze Rosse",
+    "name": "4 Stagioni",
+    "description": "Capricciosa divisa in 4 spicchi",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "prosciutto cotto",
+      "funghi champignon",
+      "olive",
+      "carciofi sott'olio"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 55,
+    "category": "Pizze Rosse",
+    "name": "La Gorgolosa",
+    "description": "Pomodoro, mozzarella fior di latte, salsiccia, cipolle rosse di Tropea, Gorgonzola",
+    "baseIngredients": [
+      "pomodoro",
+      "mozzarella fior di latte",
+      "salsiccia",
+      "cipolle rosse di Tropea",
+      "Gorgonzola"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 57,
+    "category": "Pizze Bianche",
+    "name": "La leggera",
+    "description": "Mozzarella fior di latte, pesto di rucola, prosciutto crudo di Parma, pomodorini freschi, stracciatella",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "pesto di rucola",
+      "prosciutto crudo di Parma",
+      "pomodorini freschi",
+      "stracciatella"
+    ],
+    "price": 14.5,
+    "importoBaby": 9.0,
+    "isBaby": false
+  },
+  {
+    "id": 59,
+    "category": "Pizze Bianche",
+    "name": "Nerano",
+    "description": "Mozzarella fior di latte, provola affumicata, zucchine al forno, basilico",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "provola affumicata",
+      "zucchine al forno",
+      "basilico"
+    ],
+    "price": 12.5,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 61,
+    "category": "Pizze Bianche",
+    "name": "Del Pizzificio 77",
+    "description": "Crema di melanzane, mozzarella fior di latte, guanciale croccante, stracciatella, basilico",
+    "baseIngredients": [
+      "crema di melanzane",
+      "mozzarella fior di latte",
+      "guanciale croccante",
+      "stracciatella",
+      "basilico"
+    ],
+    "price": 14.5,
+    "importoBaby": 9.0,
+    "isBaby": false
+  },
+  {
+    "id": 63,
+    "category": "Pizze Bianche",
+    "name": "Cacio e pepe",
+    "description": "Mozzarella fior di latte, pecorino romano, pepe nero",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "pecorino romano",
+      "pepe nero"
+    ],
+    "price": 10.5,
+    "importoBaby": 6.5,
+    "isBaby": false
+  },
+  {
+    "id": 65,
+    "category": "Pizze Bianche",
+    "name": "Tricolore",
+    "description": "Mozzarella fior di latte, stracciatella, pomodorini freschi, pesto di rucola",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "stracciatella",
+      "pomodorini freschi",
+      "pesto di rucola"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 67,
+    "category": "Pizze Bianche",
+    "name": "4 Formaggi",
+    "description": "Mozzarella fior di latte, Gorgonzola, Fontina, stracciatella",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "Gorgonzola",
+      "Fontina",
+      "stracciatella"
+    ],
+    "price": 13.5,
+    "importoBaby": 8.0,
+    "isBaby": false
+  },
+  {
+    "id": 69,
+    "category": "Pizze Bianche",
+    "name": "Valdostana",
+    "description": "Mozzarella fior di latte, Fontina, prosciutto cotto",
+    "baseIngredients": [
+      "mozzarella fior di latte",
+      "Fontina",
+      "prosciutto cotto"
+    ],
+    "price": 13.0,
+    "importoBaby": 7.5,
+    "isBaby": false
+  },
+  {
+    "id": 71,
+    "category": "Pizze Bianche",
+    "name": "Vesuviana",
+    "description": "Mozzarella di bufala, salsiccia, friarielli",
+    "baseIngredients": [
+      "mozzarella di bufala",
+      "salsiccia",
+      "friarielli"
+    ],
+    "price": 14.0,
+    "importoBaby": 8.5,
+    "isBaby": false
+  },
+  {
+    "id": 72,
+    "category": "Dolci",
+    "name": "Pizza alla Nutella",
+    "description": "Pizza dolce farcita con Nutella",
+    "baseIngredients": [
+      "Nutella"
+    ],
+    "price": 8.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 74,
+    "category": "Dolci",
+    "name": "Delizie di pizza fritta dolce",
+    "description": "Pizza fritta dolce",
+    "baseIngredients": [],
+    "price": 10.0,
+    "importoBaby": 6.0,
+    "isBaby": false
+  },
+  {
+    "id": 75,
+    "category": "Bevande",
+    "name": "Birra in bottiglia 0,33 L",
+    "description": "Birra in bottiglia da 33 cl",
+    "baseIngredients": [],
+    "price": 3.5,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 76,
+    "category": "Bevande",
+    "name": "Birra in bottiglia 0,66 L",
+    "description": "Birra in bottiglia da 66 cl",
+    "baseIngredients": [],
+    "price": 5.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 77,
+    "category": "Bevande",
+    "name": "Bibite in lattina 0,33 L",
+    "description": "Coca Cola, Fanta, Sprite, Pepsi – lattina 33 cl",
+    "baseIngredients": [],
+    "price": 3.0,
+    "importoBaby": null,
+    "isBaby": false
+  },
+  {
+    "id": 78,
+    "category": "Bevande",
+    "name": "Bibite in bottiglia 1,5 L",
+    "description": "Coca Cola, Fanta, Sprite – bottiglia 1,5 L",
+    "baseIngredients": [],
+    "price": 5.5,
+    "importoBaby": null,
+    "isBaby": false
+  }
+]
