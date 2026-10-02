@@ -1,0 +1,196 @@
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: linear-gradient(135deg, #c0392b, #96281b);
+  color: #fff;
+  height: 64px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navbar-logo-img {
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,.3));
+}
+.navbar-logo-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: .25rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  height: 100%;
+}
+.navbar-menu > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar-menu > li > a {
+  color: rgba(255,255,255,.9);
+  text-decoration: none;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  padding: .45rem .9rem;
+  border-radius: 6px;
+  transition: .18s;
+}
+.navbar-menu > li > a:hover {
+  background: rgba(255,255,255,.15);
+  color: #fff;
+}
+
+.navbar-menu-item--has-dropdown { position: relative; }
+.navbar-menu-item--has-dropdown > a::after {
+  content: ' ▾';
+  font-size: .7rem;
+  opacity: .75;
+  vertical-align: middle;
+}
+.navbar-menu-item--has-dropdown:hover > a {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+}
+.navbar-menu-item--has-dropdown:hover .navbar-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.18);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 230px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s ease;
+  z-index: 999;
+  overflow: hidden;
+  background: linear-gradient(90deg, #ffffecea 20%, #e0c31b9a 100%);
+}
+.navbar-dropdown::before {
+  content: 'Categorie';
+  display: block;
+  padding: .6rem 1rem .45rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  border-bottom: 1px solid #f3f4f6;
+  background: inherit;
+}
+.navbar-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1rem;
+  color: #1f2937;
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+  transition: .15s;
+}
+.navbar-dropdown li a::before {
+  content: '›';
+  color: #c0392b;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.navbar-dropdown li a:hover {
+  background: #fff5f5;
+  color: #c0392b;
+  border-left-color: #c0392b;
+  padding-left: 1.3rem;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.navbar-user-name {
+  color: rgba(255,255,255,.9);
+  font-weight: 600;
+  font-size: .9rem;
+  padding-right: .5rem;
+  border-right: 1px solid rgba(255,255,255,.3);
+}
+
+.navbar-login-btn,
+.navbar-register-btn,
+.navbar-logout-btn {
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+  display: inline-block;
+  padding: .45rem .9rem;
+  font-size: .9rem;
+  border: 2px solid;
+}
+.navbar-login-btn {
+  color: #fff;
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.5);
+}
+.navbar-login-btn:hover {
+  background: rgba(255,255,255,.25);
+  border-color: #fff;
+}
+.navbar-register-btn {
+  color: #1f2937;
+  background: #fbbf24;
+  border-color: #fbbf24;
+}
+.navbar-register-btn:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+.navbar-logout-btn {
+  color: #fff;
+  background: #ef4444;
+  border-color: #ef4444;
+}
+.navbar-logout-btn:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .navbar-main { display: none !important; }
+}

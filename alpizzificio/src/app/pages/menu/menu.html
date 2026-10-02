@@ -1,0 +1,254 @@
+<section class="cpage pt-6 md:pt-0">
+  <h1 class="menu-title">Il Nostro Menu</h1>
+  <div class="pizza-image-container mb-8">
+    <img src="/pizza.jpg" alt="Pizza" class="mx-auto" style="max-width: 300px; width: 100%; height: auto;" />
+  </div>
+  <div class="menu-wrapper">
+    <div class="menu-card">
+
+      <!-- RICERCA LIBERA -->
+      <div class="search-bar">
+        <span class="search-bar__icon">🔍</span>
+        <input
+          class="search-bar__input"
+          type="text"
+          placeholder="Cerca per ingrediente o descrizione…"
+          [value]="searchQuery()"
+          (input)="searchQuery.set($any($event.target).value)"
+        />
+        @if (searchQuery()) {
+          <button class="search-bar__clear" (click)="clearSearch()" aria-label="Svuota ricerca">🗑️</button>
+        }
+      </div>
+
+      <!-- FILTRO CATEGORIE -->
+      @if (allCategories().length > 0) {
+        <div class="category-filter">
+          <p class="category-filter__label">Filtra per categoria</p>
+          <div class="category-panel__chips">
+            @for (group of allCategories(); track group.category) {
+              <label class="category-chip" [class.category-chip--active]="isCategorySelected(group.category)">
+                <input type="checkbox"
+                  class="sr-only"
+                  [checked]="isCategorySelected(group.category)"
+                  (change)="toggleCategoryFilter(group.category)" />
+                {{ group.category }}
+              </label>
+            }
+          </div>
+          @if (selectedCategories().size > 0 ) {
+            <button (click)="clearCategoryFilter()" class="category-filter__reset">
+              Mostra tutto
+            </button><br/>
+          }
+          @if (hasAnyCategoryCollapsed()) {
+            <button (click)="expandAllCategories()" class="category-filter__reset">Espandi tutte le categorie</button>
+          }
+        </div>
+      }
+
+      <!-- CATEGORIE -->
+      @for (group of filteredCategories(); track group.category) {
+        <div class="menu-section">
+
+          <!-- INTESTAZIONE CATEGORIA -->
+          <button
+            (click)="toggleCategoryCollapse(group.category)"
+            class="menu-section__header">
+            <span class="menu-section__title">{{ group.category }}</span>
+            <span class="menu-section__chevron" [class.menu-section__chevron--open]="!isCategoryCollapsed(group.category)"></span>
+          </button>
+
+          @if (!isCategoryCollapsed(group.category)) {
+            <ul class="menu-list">
+              @for (item of group.items; track item.id) {
+                <li class="menu-item" [class.menu-item--expanded]="activeCustomization !== null && activeCustomization.pizza.id === item.id">
+                  <div class="menu-item__header">
+                    
+                    <div class="menu-item__row menu-item__row--main">
+                      <div class="menu-item__info">
+                        <span class="menu-item__name">{{ item.name }} </span>
+                      </div>
+                      @if (item.importoBaby !== null && item.importoBaby !== undefined) {
+                        <span class="menu-item__price-block">
+                          <span class="menu-item__price">
+                            {{ item.importoBaby | currency:'EUR':'symbol':'1.2-2' }}
+                          </span>
+                          <span class="menu-item__price-hint menu-item__price-hint--baby">
+                          @if(group.category !== 'Pizze Bianche' && group.category !== 'Pizze Rosse'){
+                            normale
+                          }@else {
+                            baby
+                          }
+                          </span>
+                        </span>
+                        <button class="btn-action btn-action--add" 
+                          [class.btn-action--added]="lastAddedItemId() === 'baby-' + itemIdToString(item.id)"
+                          (click)="activeCustomization !== null && activeCustomization.pizza.id === item.id ? handleAddButtonClick() : quickAddBabyToCart(item)">
+                          {{ lastAddedItemId() === 'baby-' + itemIdToString(item.id) ? '✓' : '+' }}
+                        </button>
+                      }@else {
+                        <span class="menu-item__price-block"></span>&nbsp;
+                      }
+                      
+                      <span class="menu-item__price-block">
+                        <span class="menu-item__price">
+                          {{ item.price | currency:'EUR':'symbol':'1.2-2' }}
+                        </span>
+                        <span class="menu-item__price-hint">
+                          @if(item.importoBaby !== null && item.importoBaby !== undefined){
+                              @if(group.category !== 'Pizze Bianche' && group.category !== 'Pizze Rosse'){
+                                maxi
+                            }@else {
+                              normale
+                            }                          
+                          }@else {&nbsp;}
+                        </span>
+                          <span class="menu-item__price-hint"></span>
+                      </span>
+                      <button class="btn-action btn-action--add" 
+                        [class.btn-action--added]="lastAddedItemId() === 'normal-' + itemIdToString(item.id)"
+                        (click)="activeCustomization !== null && activeCustomization.pizza.id === item.id ? handleAddButtonClick() : quickAddToCart(item)">
+                        {{ lastAddedItemId() === 'normal-' + itemIdToString(item.id) ? '✓' : '+' }}
+                      </button>
+                     
+                    </div>
+                    <!-- @if (item.importoBaby !== null && item.importoBaby !== undefined && group.category !== 'Pizze Bianche' && group.category !== 'Pizze Rosse') {
+                      <div class="menu-item__baby-row">
+                        <span class="menu-item__baby-label">Formato Baby</span>
+                        <span class="menu-item__price menu-item__price--baby">{{ item.importoBaby | currency:'EUR':'symbol':'1.2-2' }}</span>
+                        <button
+                          class="btn-action btn-action--add btn-action--baby"
+                          (click)="quickAddBabyToCart(item)"
+                          title="Aggiungi formato Baby"
+                          aria-label="Aggiungi {{ item.name }} formato Baby"
+                        >
+                          +
+                        </button>
+                        @if (canCustomize(group.category)) {
+                          <span class="menu-item__action-spacer"></span>
+                        }
+                      </div>
+                    } -->
+                    <p class="menu-item__desc">{{ item.description }}</p>
+                   @if (canCustomize(group.category)) {
+                    <div class="text-center">
+
+                      <button class="btn-action btn-action--edit" (click)="openCustomization(item)">Personalizza</button>
+                    </div>
+                      }
+                  </div>
+
+                  @if (activeCustomization !== null && activeCustomization.pizza.id === item.id) {
+                    <div class="customize-panel">
+                      <div class="customize-panel__price-preview">
+                        <span class="customize-panel__price-base">Prezzo base: {{ (activeCustomization!.isBaby ? (item.importoBaby ?? item.price) : item.price) | currency:'EUR':'symbol':'1.2-2' }}</span>
+                        @if (currentExtraPrice > 0) {
+                          <span class="customize-panel__price-extra">+ {{ currentExtraPrice | currency:'EUR':'symbol':'1.2-2' }} (aggiunte)</span>
+                          <span class="customize-panel__price-total">Totale: {{ currentTotalPrice | currency:'EUR':'symbol':'1.2-2' }}</span>
+                        }
+                      </div>
+
+                      @if (item.importoBaby !== null && item.importoBaby !== undefined) {
+                        <div class="customize-panel__section">
+                          <p class="customize-panel__label">Formato</p>
+                          <label class="baby-toggle" [class.baby-toggle--active]="activeCustomization!.isBaby">
+                            <input type="checkbox"
+                              class="baby-toggle__check"
+                              [checked]="activeCustomization!.isBaby"
+                              (change)="activeCustomization!.isBaby = !activeCustomization!.isBaby">
+                            <span class="baby-toggle__text">
+                              Versione Baby
+                              <small>{{ item.importoBaby | currency:'EUR':'symbol':'1.2-2' }} invece di {{ item.price | currency:'EUR':'symbol':'1.2-2' }}</small>
+                            </span>
+                          </label>
+                        </div>
+                      }
+
+                      @if (item.baseIngredients.length > 0) {
+                        <div class="customize-panel__section">
+                          <p class="customize-panel__label">Ingredienti base — deseleziona per rimuovere</p>
+                          <div class="customize-panel__chips">
+                            @for (ing of item.baseIngredients; track ing) {
+                              <label class="ingredient-chip" [class.ingredient-chip--removed]="!isIngredientIncluded(ing)">
+                                <input type="checkbox"
+                                  class="sr-only"
+                                  [checked]="isIngredientIncluded(ing)"
+                                  (change)="toggleIngredient(ing)" />
+                                {{ ing }}
+                              </label>
+                            }
+                          </div>
+                        </div>
+                      }
+
+                      <div class="customize-panel__section">
+                        <p class="customize-panel__label">Aggiunte</p>
+                        <div class="customize-panel__add-row">
+                          <select
+                            [(ngModel)]="activeCustomization!.newIngredient"
+                            (ngModelChange)="onIngredientSelected($event)"
+                            class="customize-panel__select">
+                            <option value="" disabled>— Seleziona ingrediente —</option>
+                            @for (ing of getAvailableIngredients(); track ing.id) {
+                              <option [value]="ing.nome">{{ ing.nome }} ({{ ing.categoria }}) + {{ ing.prezzo | currency:'EUR':'symbol':'1.2-2' }}</option>
+                            }
+                          </select>
+                        </div>
+                        @if (activeCustomization!.addedIngredients.length > 0) {
+                          <div class="customize-panel__chips mt-2">
+                            @for (ing of activeCustomization!.addedIngredients; track ing) {
+                              <span class="ingredient-chip ingredient-chip--added">
+                                {{ ing }}
+                                <button (click)="removeAddedIngredient(ing)" class="ingredient-chip__remove">✕</button>
+                              </span>
+                            }
+                          </div>
+                        }
+                      </div>
+
+                      <div class="customize-panel__section">
+                        <p class="customize-panel__label">Nota per questa voce</p>
+                        <textarea
+                          [(ngModel)]="activeCustomization!.note"
+                          rows="2"
+                          placeholder="Allergie, preferenze specifiche..."
+                          class="customize-panel__textarea">
+                        </textarea>
+                      </div>
+
+                      <div class="customize-panel__footer">
+                        <button (click)="cancelCustomization()" class="btn-action btn-action--ghost">Annulla</button>
+                        <button (click)="confirmAddToCart()" class="btn-action btn-action--confirm">Aggiungi al carrello</button>
+                      </div>
+                    </div>
+                  }
+                </li>
+              }
+            </ul>
+          }
+        </div>
+      }
+
+      @if (filteredCategories().length === 0 && allCategories().length === 0) {
+        <p class="text-center text-gray-400 py-12 text-sm">Caricamento menu...</p>
+      }
+
+    
+
+      <p class="text-xs text-gray-400 text-center mt-4 px-4">* Prodotto surgelato</p>
+      <p class="text-xs text-gray-400 text-center mt-4 px-4">
+        Informazione alla clientela sugli allergeni:<br/>
+        I nostri piatti possono contenere <b>allergeni</b>. Per qualsiasi informazione sulle sostanze e sugli <b>ingredienti utilizzati</b>, è
+        possibile consultare l'apposito <b>Libro degli Ingredienti e degli Allergeni</b> disponibile e liberamente consultabile presso
+        il nostro locale. Il nostro personale è a vostra completa disposizione per ogni chiarimento.
+      </p>
+
+      <div class="menu-order-btn">
+        <button class="bg-primary hover:bg-hPrimary text-white font-bold py-2 px-6 rounded-full" routerLink="/riepilogo">
+          Ordina ora
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
